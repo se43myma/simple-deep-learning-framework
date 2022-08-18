@@ -7,7 +7,7 @@ class ReLU(BaseLayer):
 
     def forward(self, input_tensor):
         self.input_tensor = input_tensor
-        self.output_tensor = self.output_tensor * (self.input_tensor > 0)
+        self.output_tensor = self.input_tensor * (self.input_tensor > 0)
         return self.output_tensor
 
     #error_previous = 0 if x<=0 or = error
